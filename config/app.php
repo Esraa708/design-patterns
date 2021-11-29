@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Domain\BehaviouralPatterens\StratgeyPatteren\CarCoupons\CarCouponsServiceProvider::class
 
     ],
 
