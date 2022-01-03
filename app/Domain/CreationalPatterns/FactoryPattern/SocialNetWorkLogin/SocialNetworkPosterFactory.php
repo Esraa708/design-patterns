@@ -1,4 +1,9 @@
 <?php
+
+namespace app\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin;
+
+use app\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\SocialNetworkConnectorInterface;
+
 abstract class SocialNetworkPosterFactory
 {
 

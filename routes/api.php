@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarCouponController;
+use App\Http\Controllers\NotificationSysController;
 use App\Http\Controllers\socialNetWorkController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('login/factory-pattern', socialNetWorkController::class);
 Route::post('behavioural-patterens/stratgey', [CarCouponController::class, 'addCarCoupon']);
+Route::get('structural-patterens/adapter/notification', [NotificationSysController::class, 'sendNotification']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

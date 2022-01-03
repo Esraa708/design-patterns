@@ -1,4 +1,10 @@
 <?php
+
+namespace App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin;
+
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\SocialNetworkConnectorInterface;
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\SocialNetworkPosterFactory;
+
 class FacebookPoster extends SocialNetworkPosterFactory
 {
     private $login, $password;

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use FacebookPoster;
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\FacebookPoster;
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\LinkedInPoster;
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\SocialNetworkPosterFactory;
 use Illuminate\Http\Request;
-use LinkedInPoster;
-use SocialNetworkPosterFactory;
+
+
 
 class socialNetWorkController extends Controller
 {
@@ -37,10 +39,10 @@ class socialNetWorkController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('dd');
-        // $pop= new LinkedInPoster("john_smith", "1234");
-        // dd(new FacebookPoster("john_smith", "1234"));
-        dd( $this->clientCode(new FacebookPoster("john_smith", "1234")));
+
+       if($request->input('type') == 'facebook')  $this->clientCode(new FacebookPoster('esraa',123));
+        if($request->input('type') == 'linkedin')  $this->clientCode(new LinkedInPoster('esraa',123));
+
     }
     function clientCode(SocialNetworkPosterFactory $creator)
     {

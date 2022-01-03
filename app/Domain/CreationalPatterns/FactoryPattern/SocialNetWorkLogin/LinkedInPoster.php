@@ -1,4 +1,8 @@
 <?php
+
+namespace App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin;
+
+
 class LinkedInPoster extends SocialNetworkPosterFactory
 {
     private $email, $password;
@@ -6,7 +10,7 @@ class LinkedInPoster extends SocialNetworkPosterFactory
     public function __construct(string $email, string $password)
     {
         $this->email = $email;
-        $this->password = $password;
+        $this->password = $password;            
     }
 
     public function getSocialNetwork(): SocialNetworkConnectorInterface

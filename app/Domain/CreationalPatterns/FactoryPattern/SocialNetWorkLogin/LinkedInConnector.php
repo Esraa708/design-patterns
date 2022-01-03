@@ -1,4 +1,8 @@
 <?php
+
+namespace App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin;
+
+
 class LinkedInConnector  implements SocialNetworkConnectorInterface
 {
     public function __construct(string $email, string $password)

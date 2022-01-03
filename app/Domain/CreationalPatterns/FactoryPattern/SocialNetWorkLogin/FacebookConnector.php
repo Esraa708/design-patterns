@@ -1,4 +1,9 @@
 <?php
+
+namespace App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin;
+
+use App\Domain\CreationalPatterns\FactoryPattern\SocialNetWorkLogin\SocialNetworkConnectorInterface;
+
 class FacebookConnector implements SocialNetworkConnectorInterface
 {
     private $login, $password;
